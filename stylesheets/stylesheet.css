@@ -423,30 +423,3 @@ Small Device Styles
   }
 
 }
- ul{list-style:none}
-        #content{width:800px;margin:0 auto	}
-        #content .item {
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px dotted #0088bb;
-        }
-        #content h2{color:#9c9c9c;font-size:14px;height:18px;line-height:18px}
-        div.item li{display:inline;margin-left:15px}
-        div.item li a img{display:inline-block;width:230px;height:230px}
-        #menu{position:fixed;
-            top:100px;
-            left:50%;
-            margin-left:400px;
-        }
-        #menu ul li a{ display:block;text-decoration: none;font-size: 14px;font-weight: bold;height: 20px;line-height: 20px}
-        #menu ul li a:hover,.current{background-color: #6a6a6a;color: #FFFFFF}
-        /* ie6 hack*/
-        *html,*html body{
-            background-image:url(about:blank);
-            background-attachment:fixed;
-        }
-        *html menu{
-            position:absolute;
-            top:expression(((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+100+'px');
-
-        }
