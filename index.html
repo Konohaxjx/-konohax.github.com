@@ -31,161 +31,92 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>`&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd%22%3E">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</a>
-
-</p>
-    
-    JQ实现
-    
-        &lt;em&gt;{margin:0;padding:0}
-        ul{list-style:none}
-        #content{width:800px;margin:0 auto  }
-        #content .item {
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px dotted #0088bb;
-        }
-        #content h2{color:#9c9c9c;font-size:14px;height:18px;line-height:18px}
-        div.item li{display:inline;margin-left:15px}
-        div.item li a img{display:inline-block;width:230px;height:230px}
-        #menu{position:fixed;
-            top:100px;
-            left:50%;
-            margin-left:400px;
-        }
-        #menu ul li a{ display:block;text-decoration: none;font-size: 14px;font-weight: bold;height: 20px;line-height: 20px}
-        #menu ul li a:hover,.current{background-color: #6a6a6a;color: #FFFFFF}
-        /&lt;/em&gt; ie6 hack&lt;em&gt;/
-        *html,&lt;/em&gt;html body{
-            background-image:url(about:blank);
-            background-attachment:fixed;
-        }
-        *html menu{
-            position:absolute;
-            top:expression(((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+100+&amp;#39;px&amp;#39;);&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    }
-&amp;lt;/style&amp;gt;
-&amp;lt;script src=&amp;quot;http://libs.baidu.com/jquery/1.10.2/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script&amp;gt;
-    $(function(){
-        $(window).scroll(function(){
-            var s=$(document).scrollTop();
-            var item=$(&amp;quot;#content&amp;quot;).find(&amp;quot;.item&amp;quot;);
-            var  gId=&amp;quot;&amp;quot;;
-            item.each(function(){
-                var m=$(this);
-                var itemsTop= m.offset().top;
-                if (s&amp;gt;itemsTop-100){
-                    gId=&amp;quot;#&amp;quot;+ m.attr(&amp;quot;id&amp;quot;);
-                }else {
-                    return false
-                }
-                $(&amp;quot;.current&amp;quot;).removeClass();
-                $(&amp;quot;#menu&amp;quot;).find(&amp;quot;[href=&amp;quot;+gId+&amp;quot;]&amp;quot;).addClass(&amp;quot;current&amp;quot;);
-            })
-        })
-    })
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/head&gt;&lt;/p&gt;
-
-&lt;div id="menu"&gt;
-    &lt;ul&gt;
-        &lt;!--运用锚点，实现导航定位。--&gt;
+        <div id="menu">
+    <ul>
+        <!--运用锚点，实现导航定位。-->
 
 
-        &lt;li&gt;&lt;a href="#item1" class="current"&gt;1F 男装&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#item2"&gt;2F 女装&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#item3"&gt;3F 美妆&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#item4"&gt;4F 数码&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#item5"&gt;5F 母婴&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
+        <li><a href="#item1" class="current">1F 男装</a></li>
+        <li><a href="#item2">2F 女装</a></li>
+        <li><a href="#item3">3F 美妆</a></li>
+        <li><a href="#item4">4F 数码</a></li>
+        <li><a href="#item5">5F 母婴</a></li>
+    </ul>
+</div>
+<div id="content">
+    <h1>地狗购物网</h1>
 
-&lt;div id="content"&gt;
-    &lt;h1&gt;地狗购物网&lt;/h1&gt;
-
-    &lt;div id="item1" class="item"&gt;
-        &lt;h2&gt;1F 男装&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div id="item2" class="item"&gt;
-        &lt;h2&gt;2F 女装&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div id="item3" class="item"&gt;
-        &lt;h2&gt;3F 美妆&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div id="item4" class="item"&gt;
-        &lt;h2&gt;4F 数码&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div id="item5" class="item"&gt;
-        &lt;h2&gt;5F 母婴&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-`&lt;/p&gt;
-      </section>
+    <div id="item1" class="item">
+        <h2>1F 男装</h2>
+        <ul>
+            <li><a href="#"><img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/></a></li>
+        </ul>
     </div>
-
+    <div id="item2" class="item">
+        <h2>2F 女装</h2>
+        <ul>
+            <li><a href="#"><img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/></a></li>
+        </ul>
+    </div>
+    <div id="item3" class="item">
+        <h2>3F 美妆</h2>
+        <ul>
+            <li><a href="#"><img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/></a></li>
+        </ul>
+    </div>
+    <div id="item4" class="item">
+        <h2>4F 数码</h2>
+        <ul>
+            <li><a href="#"><img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/></a></li>
+        </ul>
+    </div>
+    <div id="item5" class="item">
+        <h2>5F 母婴</h2>
+        <ul>
+            <li><a href="#"><img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/></a></li>
+        </ul>
+    </div>
+</div>
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
