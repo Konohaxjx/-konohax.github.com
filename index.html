@@ -16,181 +16,75 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Konohaxjx/1">View on GitHub</a>
+          <a id="home" href="https://github.com/Konohaxjx/1">Home</a>
+            <a id="baidu" href="http://www.baidu.com">Baidu</a>
 
-          <h1 id="project_title">konohax.GitHub.com</h1>
+          <h1 id="project_title">Welcome to xjx's web page</h1>
           <h2 id="project_tagline">what why where</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Konohaxjx/1/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Konohaxjx/1/tarball/master">Download this project as a tar.gz file</a>
-            </section>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>`&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd%22%3E">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</a>
-
-</p>
-    
-    JQ实现
-    
-        &lt;em&gt;{margin:0;padding:0}
-        ul{list-style:none}
-        #content{width:800px;margin:0 auto  }
-        #content .item {
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px dotted #0088bb;
-        }
-        #content h2{color:#9c9c9c;font-size:14px;height:18px;line-height:18px}
-        div.item li{display:inline;margin-left:15px}
-        div.item li a img{display:inline-block;width:230px;height:230px}
-        #menu{position:fixed;
-            top:100px;
-            left:50%;
-            margin-left:400px;
-        }
-        #menu ul li a{ display:block;text-decoration: none;font-size: 14px;font-weight: bold;height: 20px;line-height: 20px}
-        #menu ul li a:hover,.current{background-color: #6a6a6a;color: #FFFFFF}
-        /&lt;/em&gt; ie6 hack&lt;em&gt;/
-        *html,&lt;/em&gt;html body{
-            background-image:url(about:blank);
-            background-attachment:fixed;
-        }
-        *html menu{
-            position:absolute;
-            top:expression(((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+100+&amp;#39;px&amp;#39;);&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    }
-&amp;lt;/style&amp;gt;
-&amp;lt;script src=&amp;quot;http://libs.baidu.com/jquery/1.10.2/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script&amp;gt;
-    $(function(){
-        $(window).scroll(function(){
-            var s=$(document).scrollTop();
-            var item=$(&amp;quot;#content&amp;quot;).find(&amp;quot;.item&amp;quot;);
-            var  gId=&amp;quot;&amp;quot;;
-            item.each(function(){
-                var m=$(this);
-                var itemsTop= m.offset().top;
-                if (s&amp;gt;itemsTop-100){
-                    gId=&amp;quot;#&amp;quot;+ m.attr(&amp;quot;id&amp;quot;);
-                }else {
-                    return false
-                }
-                $(&amp;quot;.current&amp;quot;).removeClass();
-                $(&amp;quot;#menu&amp;quot;).find(&amp;quot;[href=&amp;quot;+gId+&amp;quot;]&amp;quot;).addClass(&amp;quot;current&amp;quot;);
-            })
-        })
-    })
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/head&gt;&lt;/p&gt;
-
-&lt;div id="menu"&gt;
-    &lt;ul&gt;
-        &lt;!--运用锚点，实现导航定位。--&gt;
-
-
-        &lt;li&gt;&lt;a href="#item1" class="current"&gt;1F 男装&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#item2"&gt;2F 女装&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#item3"&gt;3F 美妆&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#item4"&gt;4F 数码&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#item5"&gt;5F 母婴&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id="content"&gt;
-    &lt;h1&gt;地狗购物网&lt;/h1&gt;
-
-    &lt;div id="item1" class="item"&gt;
-        &lt;h2&gt;1F 男装&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/53660fce0001111903990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div id="item2" class="item"&gt;
-        &lt;h2&gt;2F 女装&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/5366104c0001e5c403990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div id="item3" class="item"&gt;
-        &lt;h2&gt;3F 美妆&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610820001cf5b03990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div id="item4" class="item"&gt;
-        &lt;h2&gt;4F 数码&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610ac00012df703990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div id="item5" class="item"&gt;
-        &lt;h2&gt;5F 母婴&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;&lt;img src="http://img.mukewang.com/536610cd0001f34603990422.jpg" alt=""/&gt;&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-`&lt;/p&gt;
-      </section>
-    </div>
-
+        <div id="center-content" class="con">
+            <div id="inner">
+                <h2>第一篇BLOG</h2>
+                <b>第一篇，BLOG，20160625</b>
+                <p>
+                    1、理解W3C标准，能够手写DIV+CSS，了解各主流浏览器的兼容特性；
+                    2、熟练使用各种Web前端技术，精通HTML、CSS+Div布局、JavaScript，能够熟练构建Ajax交互页面；
+                    3、深刻理解Web标准，对用户体验、交互操作流程、及用户需求有深入理解；
+                    4、熟悉了解html5更佳...
+                </p>
+                <h2>第二篇BLOG</h2>
+                <b>第二篇，BLOG，20160625</b>
+                <p>
+                    1，2年以上前端开发经验，熟练掌握JavaScript、Ajax、HTML5等Web开发技术；
+                    2，习惯于手写符合W3C标准、兼容多种浏览器的前端页面代码，而不是依赖IDE；
+                    3，熟练掌握DOM操作（原生&jQuery）；
+                    4，了解至少一门非前端开发语言（如PHP/Java/Python/Ruby等），并有一定的实战经验；
+                    5，有代码洁癖，不能忍受垃圾代码。热爱技术，有极强的好奇心及持之以恒的钻研心态；
+                    6，对自己的未来有高要求，不甘于平庸，永远挑战自己......
+                </p>
+                </div>
+        </div>
+        <div id="left-content" class="com">
+            <h3>About me</h3>
+            <img src="images/touxiang.jpg" id="myPic">
+            <a href="#">前端开发</a>
+            <ul class="list-inline">
+                <li>
+                    <a target="_blank" href="https://www.zhihu.com/">知</a>
+                </li>
+                <li>
+                    <a target="_blank"  href="http://weibo.com/u/1807194787">微</a>
+                </li>
+            </ul>
+            <hr>
+            <h4>Motto</h4>
+            <p>人生在世，全靠演技。</p>
+        </div>
+      <div id="right-content" class="con">
+          <h3>Personal profile</h3>
+          <blockquote>
+              喜欢代码，
+              <br>
+              喜欢旅游。
+          </blockquote>
+          <p id="right-content-p1">
+              毕业于2012级苏大文正学院，没有项目经验，没有实习经历，喜欢前端开发，想要做出有美感的网页。
+          </p>
+          <h5>My favorite cat</h5>
+          <img src="images/banban.gif">
+      </div>
+        </div>
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">konohax.GitHub.com maintained by <a href="https://github.com/Konohaxjx">Konohaxjx</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+
+          <p class="copyright">Copyright ©KonohaX&&Theme by @jsncostello<br/>
+              e-mail:550192389@qq.com</p>
       </footer>
     </div>
 
