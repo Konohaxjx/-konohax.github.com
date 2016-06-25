@@ -351,6 +351,9 @@ Full-Width Styles
   margin-right: 150px;
   padding: 50px ;
 }
+#inner p{
+  text-indent:2em;
+}
 #left-content{
   width: 150px;
   position: relative;
