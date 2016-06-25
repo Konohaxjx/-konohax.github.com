@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="konohax.GitHub.com : what why where">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>konohax.GitHub.com</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+        <a id="home" href="https://github.com/Konohaxjx/1">Home</a>
+        <a id="baidu" href="http://www.baidu.com">Baidu</a>
+
+        <h1 id="project_title">Welcome to xjx's web page</h1>
+        <h2 id="project_tagline">what? why! where</h2>
+
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+    <div id="center-content" class="con">
+        <div id="inner">
+            <h3>CSS技巧：清除浮动</h3>
+            <p>
+                <span style="color: #993300;"><strong>什么是CSS清除浮动？</strong></span></p>
+                <p><span>在非IE浏览器（如Firefox）下，当容器的高度为auto，且容器的内容中有浮动（float为left或right）的元素，在这种情况下，容器的高度不能自动伸长以适应内容的高度，使得内容溢出到容器外面而影响（甚至破坏）布局的现象。这个现象叫浮动溢出，为了防止这个现象的出现而进行的CSS处理，就叫CSS清除浮动。</span></p>
+                <p><span>引用W3C的例子，news容器没有包围浮动的元素。</span></p>
+<pre><span style="color: #000000;">.news {
+  background-color: gray;
+  border: solid 1px black;
+  }
+
+.news img {
+  float: left;
+  }
+
+.news p {
+  float: right;
+  }
+
+</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">="news"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">img </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="news-pic.jpg"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>some text<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+                <p><img src="http://images.cnitblog.com/blog/349636/201310/23224343-9668661a8f63445699e0a8c24a64662b.jpg" alt=""></p>
+                <p>&nbsp;</p>
+                <p><span style="color: #993300;"><strong>清除浮动方法</strong></span></p>
+                <p><strong>方法一：使用带clear属性的空元素</strong></p>
+                <p>在浮动元素后使用一个空元素如&lt;div class="clear"&gt;&lt;/div&gt;，并在CSS中赋予.clear{clear:both;}属性即可清理浮动。亦可使用&lt;br class="clear" /&gt;或&lt;hr class="clear" /&gt;来进行清理。</p>
+<pre><span style="color: #000000;">.news {
+  background-color: gray;
+  border: solid 1px black;
+  }
+
+.news img {
+  float: left;
+  }
+
+.news p {
+  float: right;
+  }
+
+.clear {
+  clear: both;
+  }
+
+</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">="news"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">img </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="news-pic.jpg"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>some text<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">="clear"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+                <p>优点：简单，代码少，浏览器兼容性好。</p>
+                <p>缺点：<span>需要添加大量无语义的html元素，代码不够优雅，后期不容易维护。</span></p>
+                <p>&nbsp;</p>
+                <p><strong>方法二：使用CSS的overflow属性</strong></p>
+                <p><span>给浮动元素的容器添加overflow:hidden;或overflow:auto;可以清除浮动，<span>另外在 IE6 中还需要触发 hasLayout ，例如为父元素设置容器宽高或设置 zoom:1。</span></span></p>
+                <p>在添加overflow属性后，浮动元素又回到了容器层，把容器高度撑起，达到了清理浮动的效果。</p>
+<pre><span style="color: #000000;">.news {
+  background-color: gray;
+  border: solid 1px black;
+  overflow: hidden;<br><span>  *zoom: 1;</span>
+  }
+
+.news img {
+  float: left;
+  }
+
+.news p {
+  float: right;
+  }
+
+</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">="news"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">img </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="news-pic.jpg"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>some text<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+                <p>&nbsp;</p>
+                <p><strong>方法三：给浮动的元素的容器添加浮动</strong></p>
+                <p><span>给浮动元素的容器也添加上浮动属性即可清除内部浮动，但是这样会使其整体浮动，影响布局，不推荐使用。</span></p>
+                <p>&nbsp;</p>
+                <p><strong>方法四：使用邻接元素处理</strong></p>
+                <p><span><span>什么都不做，给浮动元素后面的元素添加clear属性。</span></span></p>
+<pre><span style="color: #000000;">.news {
+  background-color: gray;
+  border: solid 1px black;
+  }
+
+.news img {
+  float: left;
+  }
+
+.news p {
+  float: right;
+  }
+
+.content{
+  clear:both;
+  }
+
+</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">="news"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">img </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="news-pic.jpg"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>some text<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">="content"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+
+                <p>&nbsp;</p>
+                <p><strong>方法五：使用CSS的:after伪元素</strong></p>
+                <p>结合 :after 伪元素（注意这不是伪类，而是伪元素，代表一个元素之后最近的元素）和 IEhack ，可以完美兼容当前主流的各大浏览器，这里的 IEhack 指的是触发 hasLayout。</p>
+                <p>给浮动元素的容器添加一个clearfix的class，然后给这个class添加一个:after伪元素实现元素末尾添加一个看不见的块元素（Block element）清理浮动。</p>
+
+<pre><span style="color: #000000;">.news {
+  background-color: gray;
+  border: solid 1px black;
+  }
+
+.news img {
+  float: left;
+  }
+
+.news p {
+  float: right;
+  }
+
+.clearfix:after{
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+
+.clearfix {
+  /* 触发 hasLayout */
+  zoom: 1;
+  }
+
+</span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div </span><span style="color: #ff0000;">class</span><span style="color: #0000ff;">="news clearfix"</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">img </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="news-pic.jpg"</span> <span style="color: #0000ff;">/&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>some text<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">p</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span></pre>
+                <p>通过CSS伪元素在容器的内部元素最后添加了一个看不见的空格"020"或点"."，并且赋予clear属性来清除浮动。需要注意的是为了IE6和IE7浏览器，要给clearfix这个class添加一条zoom:1;触发haslayout。</p>
+                <p>&nbsp;</p>
+                <p><span style="color: #993300;"><strong>总结</strong></span></p>
+                <p>通过上面的例子，我们不难发现清除浮动的方法可以分成两类：</p>
+                <p>一是利用 clear 属性，包括在浮动元素末尾添加一个带有 clear: both 属性的空 div 来闭合元素，其实利用 :after 伪元素的方法也是在元素末尾添加一个内容为一个点并带有 clear: both 属性的元素实现的。</p>
+                <p>二是触发浮动元素父元素的 BFC (Block Formatting Contexts, 块级格式化上下文)，使到该父元素可以包含浮动元素，关于这一点。</p>
+                <p>&nbsp;</p>
+                <p><span style="color: #993300;"><strong>推荐</strong></span></p>
+                <p><span>在网页主要布局时使用:after伪元素方法并作为主要清理浮动方式；在小模块如ul里使用overflow:hidden;（留意可能产生的隐藏溢出元素问题）；如果本身就是浮动元素则可自动清除内部浮动，无需格外处理；正文中使用邻接元素清理之前的浮动。</span></p>
+                <p>最后可以使用相对完美的:after伪元素方法清理浮动，文档结构更加清晰。</p>
+
+        </div>
+    </div>
+    </div>
+
+</div>
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+
+        <p class="copyright">Copyright ©KonohaX&&Theme by @jsncostello<br/>
+            e-mail:550192389@qq.com</p>
+    </footer>
+</div>
+
+
+
+</body>
+</html>
