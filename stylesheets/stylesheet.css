@@ -359,6 +359,10 @@ Full-Width Styles
 #inner a h2:hover{
   color: #9c9c9c;
 }
+#cssid{
+  width: 600px;
+  height: 300px;
+}
 #left-content{
   width: 150px;
   position: relative;
