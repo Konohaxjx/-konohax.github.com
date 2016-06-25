@@ -353,6 +353,12 @@ Full-Width Styles
 #inner p{
   text-indent:2em;
 }
+#inner a:hover{
+  text-decoration: none;
+}
+#inner a h2:hover{
+  color: #9c9c9c;
+}
 #left-content{
   width: 150px;
   position: relative;
